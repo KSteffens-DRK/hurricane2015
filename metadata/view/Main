@@ -11,7 +11,7 @@
         "designer|userAlias": "main",
         "designer|userClassName": "Main",
         "header": false,
-        "height": 641,
+        "height": null,
         "layout": "vbox",
         "title": "My Panel",
         "width": null
@@ -55,30 +55,60 @@
             "designerId": "00be8c17-098e-4bb5-8c55-4fb70a80ec5b"
         },
         {
-            "type": "Ext.form.field.Display",
+            "type": "Ext.panel.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "fieldLabel": "Label",
+                "frameHeader": false,
+                "header": false,
                 "layout|flex": 1,
-                "margin": "60 0 0 0",
-                "style": [
-                    "{",
-                    "'font-size': '30px'",
-                    "}"
-                ],
-                "value": [
-                    "Patienten Registrierung 2015"
-                ]
+                "margin": "50 0 0 0",
+                "title": "My Panel"
             },
-            "name": "MyDisplayField",
-            "configAlternates": {
-                "value": "object"
-            },
-            "designerId": "5cd8a830-4b36-4670-a0b2-e825997f0b3c"
+            "name": "MyPanel",
+            "designerId": "95b92f3c-845e-4963-863e-b16994989340",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "padding": 10,
+                        "style": [
+                            "{'font-size': '20px;'}"
+                        ],
+                        "text": "Anmelden"
+                    },
+                    "name": "MyButton",
+                    "designerId": "e56e17fd-cd40-4e4d-8061-e772bf599c29",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "alert('Hallo Dave');"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onButtonClick",
+                            "designerId": "bfa56d7b-c37c-47fe-afad-c5d491907c80"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

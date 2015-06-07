@@ -26,6 +26,7 @@ Ext.define('Hurricane.view.MainViewport', {
     viewModel: {
         type: 'mainviewport'
     },
+    scrollable: true,
 
     items: [
         {

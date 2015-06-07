@@ -20,15 +20,16 @@ Ext.define('Hurricane.view.Main', {
     requires: [
         'Hurricane.view.MainViewModel',
         'Ext.Img',
-        'Ext.form.field.Display'
+        'Ext.panel.Panel',
+        'Ext.button.Button'
     ],
 
     viewModel: {
         type: 'main'
     },
-    height: 641,
     header: false,
     title: 'My Panel',
+    defaultListenerScope: true,
 
     layout: {
         type: 'vbox',
@@ -48,15 +49,30 @@ Ext.define('Hurricane.view.Main', {
             src: 'hurricane/2015/img/hurricane2015.jpg'
         },
         {
-            xtype: 'displayfield',
+            xtype: 'panel',
             flex: 1,
-            margin: '60 0 0 0',
-            style: {
-                'font-size': '30px'
-            },
-            fieldLabel: 'Label',
-            value: 'Patienten Registrierung 2015'
+            margin: '50 0 0 0',
+            frameHeader: false,
+            header: false,
+            title: 'My Panel',
+            items: [
+                {
+                    xtype: 'button',
+                    padding: 10,
+                    style: {
+                        'font-size': '20px;'
+                    },
+                    text: 'Anmelden',
+                    listeners: {
+                        click: 'onButtonClick'
+                    }
+                }
+            ]
         }
-    ]
+    ],
+
+    onButtonClick: function(button, e, eOpts) {
+        alert('Hallo Dave');
+    }
 
 });

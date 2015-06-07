@@ -8,9 +8,13 @@
     "userConfig": {
         "designer|initialView": true,
         "designer|userAlias": "mainViewport",
-        "designer|userClassName": "MainViewport"
+        "designer|userClassName": "MainViewport",
+        "scrollable": true
     },
     "name": "MyViewport",
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
     "designerId": "57fe8a74-1720-4f8d-89a2-35a11d2d0c0d",
     "viewControllerInstanceId": "640026f0-cd5e-4d33-a3fd-f1fe5139740d",
     "viewModelInstanceId": "d6cb2c42-6f70-4747-9d5e-a1c91185e407",
