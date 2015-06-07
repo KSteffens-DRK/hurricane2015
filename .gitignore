@@ -2,3 +2,14 @@
 bootstrap.json
 build/
 ext/
+.sencha/
+packages/
+saas/
+index.html
+app.js
+app.json
+app.json.meta
+bootstrap.css
+bootstrap.js
+bootstrap.json
+build.xml
