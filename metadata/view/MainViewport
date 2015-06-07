@@ -1,0 +1,30 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainViewport",
+        "designer|userClassName": "MainViewport"
+    },
+    "name": "MyViewport",
+    "designerId": "57fe8a74-1720-4f8d-89a2-35a11d2d0c0d",
+    "viewControllerInstanceId": "640026f0-cd5e-4d33-a3fd-f1fe5139740d",
+    "viewModelInstanceId": "d6cb2c42-6f70-4747-9d5e-a1c91185e407",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "main",
+            "designerId": "097042df-196a-47fe-8394-9d0d445e163d",
+            "masterInstanceId": "5701030b-ea65-4459-b5dc-38f02e557a28"
+        }
+    ]
+}

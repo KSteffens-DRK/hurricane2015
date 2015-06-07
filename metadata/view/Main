@@ -1,0 +1,84 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "center",
+        "container|pack": "center",
+        "designer|userAlias": "main",
+        "designer|userClassName": "Main",
+        "header": false,
+        "height": 641,
+        "layout": "vbox",
+        "title": "My Panel",
+        "width": null
+    },
+    "name": "MyPanel",
+    "designerId": "5701030b-ea65-4459-b5dc-38f02e557a28",
+    "viewControllerInstanceId": "2b35b6b3-e57a-49e8-adb5-9fcacad41e5b",
+    "viewModelInstanceId": "99e68e4a-1c17-4278-9066-cc758e95f957",
+    "cn": [
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "layout|flex": null,
+                "margin": "70 0 0 0",
+                "src": "hurricane/2015/img/DRK640.png",
+                "width": 300
+            },
+            "name": "MyImg1",
+            "designerId": "460cf6ca-3e0e-4a78-9215-b353df68ad96"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "margin": "50 0 0 0",
+                "src": "hurricane/2015/img/hurricane2015.jpg",
+                "width": null
+            },
+            "name": "MyImg",
+            "designerId": "00be8c17-098e-4bb5-8c55-4fb70a80ec5b"
+        },
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Label",
+                "layout|flex": 1,
+                "margin": "60 0 0 0",
+                "style": [
+                    "{",
+                    "'font-size': '30px'",
+                    "}"
+                ],
+                "value": [
+                    "Patienten Registrierung 2015"
+                ]
+            },
+            "name": "MyDisplayField",
+            "configAlternates": {
+                "value": "object"
+            },
+            "designerId": "5cd8a830-4b36-4670-a0b2-e825997f0b3c"
+        }
+    ]
+}
