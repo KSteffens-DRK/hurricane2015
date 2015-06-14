@@ -6,10 +6,17 @@
     },
     "codeClass": null,
     "userConfig": {
+        "models": [
+            "patientenList"
+        ],
         "name": "Hurricane",
+        "stores": [
+            "patientenList"
+        ],
         "views": [
             "MainViewport",
-            "Main"
+            "Main",
+            "Eingabe"
         ]
     },
     "name": "Application",

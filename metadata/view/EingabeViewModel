@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "eingabe",
+        "designer|userClassName": "EingabeViewModel"
+    },
+    "designerId": "9e727b3e-2f21-4778-8418-e075577ca261"
+}

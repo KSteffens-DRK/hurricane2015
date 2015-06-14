@@ -1,0 +1,60 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "designer|userClassName": "patientenList",
+        "model": "patientenList",
+        "storeId": "patientenList"
+    },
+    "name": "MyStore",
+    "designerId": "fcd3daa3-93eb-4e84-8699-4e3972fe49c3",
+    "cn": [
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "lastname"
+            },
+            "name": "MySorter",
+            "designerId": "4dfdfcf9-8302-497e-907a-d677cb5d6549"
+        },
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "/resources/Libraries/Database/gridPatientenList.php"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "6ca3b329-7137-4281-9531-209be0ecd6e9",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "ea07099b-8129-464e-a141-dd413086ac76"
+                }
+            ]
+        }
+    ]
+}

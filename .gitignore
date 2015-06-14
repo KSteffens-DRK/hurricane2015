@@ -4,7 +4,8 @@ build/
 ext/
 .sencha/
 packages/
-saas/
+sass/
+resources/
 index.html
 app.js
 app.json

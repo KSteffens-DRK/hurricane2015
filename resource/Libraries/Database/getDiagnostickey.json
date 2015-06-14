@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "data": [
+        {
+            "digID": "1",
+            "description": "Blasen, Sonnenbrand, Fenstilsalbe",
+            "key": "chirogisch"
+        },
+        {
+            "digID": "2",
+            "description": "kleine Wunde versorgt mit Naht in UHS",
+            "key": "chirog 1"
+        }
+    ]
+}

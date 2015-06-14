@@ -9,6 +9,7 @@
         "designer|initialView": true,
         "designer|userAlias": "mainViewport",
         "designer|userClassName": "MainViewport",
+        "id": "mainviewport",
         "scrollable": true
     },
     "name": "MyViewport",
