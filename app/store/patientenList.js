@@ -36,7 +36,7 @@ Ext.define('Hurricane.store.patientenList', {
             },
             proxy: {
                 type: 'ajax',
-                url: '/resources/Libraries/Database/gridPatientenList.php',
+                url: 'resource/Libraries/Database/gridPatientenList.php',
                 reader: {
                     type: 'json',
                     rootProperty: 'data'

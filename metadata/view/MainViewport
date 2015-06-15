@@ -27,6 +27,9 @@
                 "type": "array"
             },
             "codeClass": null,
+            "userConfig": {
+                "manageHeight": true
+            },
             "name": "main",
             "designerId": "097042df-196a-47fe-8394-9d0d445e163d",
             "masterInstanceId": "5701030b-ea65-4459-b5dc-38f02e557a28"

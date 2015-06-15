@@ -36,7 +36,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "/resources/Libraries/Database/gridPatientenList.php"
+                "url": "resource/Libraries/Database/gridPatientenList.php"
             },
             "name": "MyAjaxProxy",
             "designerId": "6ca3b329-7137-4281-9531-209be0ecd6e9",

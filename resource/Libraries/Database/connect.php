@@ -1,18 +1,17 @@
 <?php
 $host = $_SERVER['HTTP_HOST'];
 
-if (strstr($host, 'dev')) {
-	define('dbname', 'dev_hurricane');
-	define('User', 'devhurricane');
-	define('Password', 'qwertz');
-} else {
-	define('dbname', 'test_hurricane');
-	define('User', 'testhurricane');
-	define('Password', 'qwertz');
+
+	define('dbname', 'hurricane');
+	define('User', 'root');
+	define('Password', '');
+
+	
+$mysqli = new mysqli('localhost', User, Password, dbname);
+
+/* check connection */
+if ($mysqli->connect_errno) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
 }
-$link = mysql_connect('localhost', User, Password);
-if (!$link) {
-	die('Verbindung schlug fehl: ' . mysql_error());
-}
-mysql_select_db(dbname);
 

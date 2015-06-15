@@ -3,7 +3,7 @@
     "settings": {
         "cmd": {
             "license": "gpl",
-            "cmdVersion": "5.1.3.61",
+            "cmdVersion": "5.1.1.39",
             "frameworkVersion": "5.1.0.107"
         },
         "canvasControls": {
@@ -15,7 +15,7 @@
             }
         },
         "urlPrefix": "http://localhost:1841",
-        "exportPath": "",
+        "exportPath": "C:/wamp/www/hurricane2015",
         "spacesToIndent": 4,
         "sdkPath": "",
         "lineEnding": "CRLF",
@@ -56,8 +56,7 @@
             "10c3b822-6d83-46bc-b518-5029ac0967a3"
         ],
         "resource": [
-            "52652499-f7ca-456d-801b-f88973a0eeca",
-            "6fa4a844-ea5f-4d1b-a192-1060be883d8b"
+            "fc1d65a6-0fdd-4ecc-bb6d-543f8cae735f"
         ],
         "app": [
             "application"

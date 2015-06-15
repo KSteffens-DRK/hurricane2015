@@ -7,10 +7,11 @@ $query = "select p.*, count(pr.patientID) as count
 	    pr.patientID = p.patientID
 	    GROUP BY p.patientID";
 
-$sqldata = mysql_query($query);
+	$sqldata = $mysqli->query($query);
+
 
 $rows = array();
-while($r = mysql_fetch_assoc($sqldata)) {
+while($r = mysqli_fetch_assoc($sqldata)) {
   $rows[] = $r;
 }
 $result['success'] = true;

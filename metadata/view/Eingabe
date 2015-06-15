@@ -24,73 +24,18 @@
         {
             "type": "Ext.grid.Panel",
             "reference": {
-                "name": "dockedItems",
+                "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "dock": "left",
+                "dock": null,
+                "store": "patientenLists",
                 "title": "My Grid Panel"
             },
             "name": "MyGridPanel",
             "designerId": "2d4a9987-6f53-4bad-be01-2298adb3f616",
             "cn": [
-                {
-                    "type": "Ext.grid.column.Column",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "string",
-                        "text": "String"
-                    },
-                    "name": "MyColumn",
-                    "designerId": "0a4ddbd2-1f22-4e49-afd2-9d5bddeeb7a0"
-                },
-                {
-                    "type": "Ext.grid.column.Number",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "number",
-                        "text": "Number"
-                    },
-                    "name": "MyNumberColumn",
-                    "designerId": "12483c68-08ec-42c7-970c-6a0c25f46050"
-                },
-                {
-                    "type": "Ext.grid.column.Date",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "date",
-                        "text": "Date"
-                    },
-                    "name": "MyDateColumn",
-                    "designerId": "98d90fa4-4398-4c3b-94fb-21238786e9d4"
-                },
-                {
-                    "type": "Ext.grid.column.Boolean",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "bool",
-                        "text": "Boolean"
-                    },
-                    "name": "MyBooleanColumn",
-                    "designerId": "cb248b92-87b7-4176-867c-b21a2fad01aa"
-                },
                 {
                     "type": "Ext.view.Table",
                     "reference": {
@@ -100,6 +45,76 @@
                     "codeClass": null,
                     "name": "MyTable",
                     "designerId": "54e1a462-7398-452d-bfb0-f6c640ee2a26"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "patientenID",
+                        "text": "Patienten Id"
+                    },
+                    "name": "MyColumn1",
+                    "designerId": "b6665418-b08b-4fbb-a16a-6b384e7d40cd"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "firstname",
+                        "text": "Firstname"
+                    },
+                    "name": "MyColumn2",
+                    "designerId": "27d99926-d116-4c48-8758-300485fa9b67"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "lastname",
+                        "text": "Lastname"
+                    },
+                    "name": "MyColumn3",
+                    "designerId": "0fffcfc7-0423-49a5-b22b-512225b50576"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "gebDat",
+                        "text": "Geb Dat"
+                    },
+                    "name": "MyColumn4",
+                    "designerId": "0a95b12e-9a7a-4b89-a910-eea6590fab21"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "count",
+                        "text": "Count"
+                    },
+                    "name": "MyColumn5",
+                    "designerId": "991dfeb6-0f32-4d80-ae68-08de637ce8f5"
                 }
             ]
         }

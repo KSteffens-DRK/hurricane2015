@@ -20,10 +20,8 @@ Ext.define('Hurricane.view.Eingabe', {
     requires: [
         'Hurricane.view.EingabeViewModel',
         'Ext.grid.Panel',
-        'Ext.grid.column.Number',
-        'Ext.grid.column.Date',
-        'Ext.grid.column.Boolean',
-        'Ext.view.Table'
+        'Ext.view.Table',
+        'Ext.grid.column.Column'
     ],
 
     viewModel: {
@@ -34,31 +32,36 @@ Ext.define('Hurricane.view.Eingabe', {
     header: false,
     title: 'My Panel',
 
-    dockedItems: [
+    items: [
         {
             xtype: 'gridpanel',
-            dock: 'left',
             title: 'My Grid Panel',
+            store: 'patientenLists',
             columns: [
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'string',
-                    text: 'String'
+                    dataIndex: 'patientenID',
+                    text: 'Patienten Id'
                 },
                 {
-                    xtype: 'numbercolumn',
-                    dataIndex: 'number',
-                    text: 'Number'
+                    xtype: 'gridcolumn',
+                    dataIndex: 'firstname',
+                    text: 'Firstname'
                 },
                 {
-                    xtype: 'datecolumn',
-                    dataIndex: 'date',
-                    text: 'Date'
+                    xtype: 'gridcolumn',
+                    dataIndex: 'lastname',
+                    text: 'Lastname'
                 },
                 {
-                    xtype: 'booleancolumn',
-                    dataIndex: 'bool',
-                    text: 'Boolean'
+                    xtype: 'gridcolumn',
+                    dataIndex: 'gebDat',
+                    text: 'Geb Dat'
+                },
+                {
+                    xtype: 'gridcolumn',
+                    dataIndex: 'count',
+                    text: 'Count'
                 }
             ]
         }
