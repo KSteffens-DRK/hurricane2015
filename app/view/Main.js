@@ -30,20 +30,14 @@ Ext.define('Hurricane.view.Main', {
     },
     border: false,
     scrollable: true,
+    layout: 'fit',
     header: false,
     title: 'My Panel',
     defaultListenerScope: true,
 
-    layout: {
-        type: 'vbox',
-        align: 'center',
-        pack: 'center'
-    },
-    dockedItems: [
+    items: [
         {
             xtype: 'tabpanel',
-            flex: 1,
-            dock: 'top',
             border: false,
             frameHeader: false,
             activeTab: 0,
@@ -52,12 +46,8 @@ Ext.define('Hurricane.view.Main', {
                     xtype: 'panel',
                     tabIndex: 1,
                     border: false,
+                    layout: 'absolute',
                     title: 'Home',
-                    layout: {
-                        type: 'hbox',
-                        align: 'stretch',
-                        pack: 'center'
-                    },
                     tabConfig: {
                         xtype: 'tab',
                         closable: false
@@ -68,6 +58,7 @@ Ext.define('Hurricane.view.Main', {
                             border: false,
                             frameHeader: false,
                             header: false,
+                            manageHeight: false,
                             title: 'My Panel',
                             layout: {
                                 type: 'vbox',
@@ -93,14 +84,23 @@ Ext.define('Hurricane.view.Main', {
                     xtype: 'panel',
                     border: false,
                     title: 'Eingabe',
-                    layout: {
-                        type: 'vbox',
-                        align: 'stretch'
-                    },
                     items: [
                         {
-                            xtype: 'eingabe',
-                            width: 503
+                            xtype: 'panel',
+                            width: 300,
+                            frameHeader: false,
+                            header: false,
+                            title: 'My Panel',
+                            layout: {
+                                type: 'hbox',
+                                align: 'stretch'
+                            },
+                            items: [
+                                {
+                                    xtype: 'eingabe',
+                                    width: 300
+                                }
+                            ]
                         }
                     ]
                 },

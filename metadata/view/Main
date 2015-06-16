@@ -7,13 +7,11 @@
     "codeClass": null,
     "userConfig": {
         "border": false,
-        "container|align": "center",
-        "container|pack": "center",
         "designer|userAlias": "main",
         "designer|userClassName": "Main",
         "header": false,
         "height": null,
-        "layout": "vbox",
+        "layout": "fit",
         "scrollable": true,
         "title": "My Panel",
         "width": null
@@ -29,17 +27,16 @@
         {
             "type": "Ext.tab.Panel",
             "reference": {
-                "name": "dockedItems",
+                "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
                 "activeTab": 0,
                 "border": false,
-                "dock": "top",
+                "dock": null,
                 "frameHeader": false,
-                "height": null,
-                "layout|flex": 1
+                "height": null
             },
             "name": "MyTabPanel",
             "designerId": "b4b9eab0-fb08-4a17-91ed-e28f15bd98c4",
@@ -53,11 +50,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "border": false,
-                        "container|align": "stretch",
-                        "container|pack": "center",
                         "designer|displayName": "Home",
+                        "designer|snapToGrid": 10,
                         "dock": null,
-                        "layout": "hbox",
+                        "layout": "absolute",
                         "tabIndex": 1,
                         "title": "Home"
                     },
@@ -90,7 +86,7 @@
                                 "frameHeader": false,
                                 "header": false,
                                 "layout": "vbox",
-                                "layout|flex": null,
+                                "manageHeight": false,
                                 "title": "My Panel"
                             },
                             "name": "MyPanel3",
@@ -142,27 +138,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "border": false,
-                        "container|align": "stretch",
-                        "layout": "vbox",
+                        "height": null,
                         "title": "Eingabe"
                     },
                     "name": "MyPanel1",
                     "designerId": "4e195ea4-a2e0-4cc6-a40f-e042b39f2c13",
                     "cn": [
-                        {
-                            "type": "linkedinstance",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "width": 503
-                            },
-                            "name": "eingabe",
-                            "designerId": "f1e178a6-c5d8-4f12-8d94-9cabb77f9aed",
-                            "masterInstanceId": "b0ec611e-b320-4d92-9d36-41fd623de198"
-                        },
                         {
                             "type": "Ext.tab.Tab",
                             "reference": {
@@ -172,6 +153,40 @@
                             "codeClass": null,
                             "name": "TabConfig1",
                             "designerId": "cae46e06-30f1-4bd3-8331-d28292c1316d"
+                        },
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "frameHeader": false,
+                                "header": false,
+                                "layout": "hbox",
+                                "title": "My Panel",
+                                "width": 300
+                            },
+                            "name": "MyPanel4",
+                            "designerId": "9c9bdffe-0ff2-4f9d-8b8a-bd57f21b95f3",
+                            "cn": [
+                                {
+                                    "type": "linkedinstance",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 300
+                                    },
+                                    "name": "eingabe",
+                                    "designerId": "f1e178a6-c5d8-4f12-8d94-9cabb77f9aed",
+                                    "masterInstanceId": "b0ec611e-b320-4d92-9d36-41fd623de198"
+                                }
+                            ]
                         }
                     ]
                 },

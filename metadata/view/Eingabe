@@ -36,8 +36,14 @@
                 "dock": null,
                 "frameHeader": false,
                 "header": false,
+                "height": 500,
+                "id": "patientenList",
+                "leadingBufferZone": null,
+                "manageHeight": false,
+                "minHeight": 500,
                 "store": "patientenList",
                 "title": "My Grid Panel",
+                "trailingBufferZone": null,
                 "width": 300
             },
             "name": "MyGridPanel",
@@ -52,6 +58,19 @@
                     "codeClass": null,
                     "name": "MyTable",
                     "designerId": "54e1a462-7398-452d-bfb0-f6c640ee2a26"
+                },
+                {
+                    "type": "Ext.grid.column.RowNumberer",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": 30
+                    },
+                    "name": "MyRowNumberer",
+                    "designerId": "eff9b533-e5fa-463e-aedc-2ae7ae4b7d20"
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -69,7 +88,7 @@
                     "designerId": "b6665418-b08b-4fbb-a16a-6b384e7d40cd"
                 },
                 {
-                    "type": "Ext.grid.column.Column",
+                    "type": "Ext.grid.column.Template",
                     "reference": {
                         "name": "columns",
                         "type": "array"
@@ -77,9 +96,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "lastname",
-                        "text": "Name"
+                        "text": "Name",
+                        "width": 170
                     },
-                    "name": "MyColumn",
+                    "name": "MyTemplateColumn",
                     "designerId": "0fffcfc7-0423-49a5-b22b-512225b50576",
                     "cn": [
                         {
@@ -91,7 +111,9 @@
                             "codeClass": null,
                             "userConfig": {
                                 "designer|displayName": "tpl",
-                                "implHandler": null
+                                "implHandler": [
+                                    "<b>{lastname}, {firstname}</b><br />{gebDat:date(\"d.m.Y\")}"
+                                ]
                             },
                             "name": "tpl",
                             "designerId": "c19f6ae1-2cd0-47af-a9c4-775ccd919350"
@@ -107,23 +129,102 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "count",
-                        "text": "Anzahl"
+                        "text": "Anzahl",
+                        "width": 50
                     },
                     "name": "MyColumn5",
                     "designerId": "991dfeb6-0f32-4d80-ae68-08de637ce8f5"
                 },
                 {
-                    "type": "Ext.grid.column.Column",
+                    "type": "Ext.grid.column.Action",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "text": "Info"
+                        "text": "Info",
+                        "width": 50
                     },
-                    "name": "MyColumn2",
-                    "designerId": "64b17236-2f14-4138-95c8-09a04fa33a8e"
+                    "name": "MyActionColumn",
+                    "designerId": "64b17236-2f14-4138-95c8-09a04fa33a8e",
+                    "cn": [
+                        {
+                            "type": "actioncolumnitem",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "icon": "resource/icons/page_find.gif",
+                                "tooltip": "Protocoll Info's"
+                            },
+                            "name": "MyActionColumnItem",
+                            "designerId": "cf96f395-c00b-4eb1-b511-98bfb909583c",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "view",
+                                            "rowIndex",
+                                            "colIndex",
+                                            "item",
+                                            "e",
+                                            "record",
+                                            "row"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "Ext.create('Hurricane.view.DetailWindow', {record: record}).show();"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "3f6e2c43-00be-4e73-b17a-19649fc1343a"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.plugin.BufferedRenderer",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "leadingBufferZone": 50,
+                        "numFromEdge": 10,
+                        "trailingBufferZone": 50
+                    },
+                    "name": "MyBufferedRenderer",
+                    "designerId": "c4a94511-9384-493e-887b-a506c33d8251"
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPatientenListAfterRender",
+                        "implHandler": [
+                            "var height = document.getElementById('ext-element-1').clientHeight - document.getElementById('tabbar-1012').clientHeight;",
+                            "Ext.getCmp('patientenList').setHeight(height);"
+                        ],
+                        "name": "afterrender",
+                        "scope": "me"
+                    },
+                    "name": "onPatientenListAfterRender",
+                    "designerId": "9fe7f27c-2ed6-4dce-a4ec-5bb84f86d399"
                 }
             ]
         }

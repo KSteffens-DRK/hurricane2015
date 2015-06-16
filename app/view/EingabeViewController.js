@@ -15,5 +15,11 @@
 
 Ext.define('Hurricane.view.EingabeViewController', {
     extend: 'Ext.app.ViewController',
-    alias: 'controller.eingabe'
+    alias: 'controller.eingabe',
+
+    onPatientenListAfterRender: function(component, eOpts) {
+        var height = document.getElementById('ext-element-1').clientHeight - document.getElementById('tabbar-1012').clientHeight;
+        Ext.getCmp('patientenList').setHeight(height);
+    }
+
 });
