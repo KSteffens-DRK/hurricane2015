@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "border": false,
         "container|align": "center",
         "container|pack": "center",
         "designer|userAlias": "main",
@@ -34,10 +35,11 @@
             "codeClass": null,
             "userConfig": {
                 "activeTab": 0,
+                "border": false,
                 "dock": "top",
                 "frameHeader": false,
                 "height": null,
-                "layout|flex": null
+                "layout|flex": 1
             },
             "name": "MyTabPanel",
             "designerId": "b4b9eab0-fb08-4a17-91ed-e28f15bd98c4",
@@ -50,9 +52,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "container|align": "center",
+                        "border": false,
+                        "container|align": "stretch",
+                        "container|pack": "center",
                         "designer|displayName": "Home",
-                        "layout": "vbox",
+                        "dock": null,
+                        "layout": "hbox",
                         "tabIndex": 1,
                         "title": "Home"
                     },
@@ -73,37 +78,58 @@
                             "designerId": "a6c5159b-0f99-4f70-8fde-4fc263eb9d7b"
                         },
                         {
-                            "type": "Ext.Img",
+                            "type": "Ext.panel.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "height": null,
+                                "border": false,
+                                "container|align": "center",
+                                "frameHeader": false,
+                                "header": false,
+                                "layout": "vbox",
                                 "layout|flex": null,
-                                "margin": "70 0 0 0",
-                                "src": "hurricane/2015/img/DRK640.png",
-                                "width": 300
+                                "title": "My Panel"
                             },
-                            "name": "MyImg1",
-                            "designerId": "460cf6ca-3e0e-4a78-9215-b353df68ad96"
-                        },
-                        {
-                            "type": "Ext.Img",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "height": null,
-                                "margin": "50 0 0 0",
-                                "src": "hurricane/2015/img/hurricane2015.jpg",
-                                "width": null
-                            },
-                            "name": "MyImg",
-                            "designerId": "00be8c17-098e-4bb5-8c55-4fb70a80ec5b"
+                            "name": "MyPanel3",
+                            "designerId": "4012207f-a98e-4291-83de-16d5a58e9aa3",
+                            "cn": [
+                                {
+                                    "type": "Ext.Img",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": null,
+                                        "layout|flex": null,
+                                        "margin": "70 0 0 0",
+                                        "src": "hurricane/2015/img/DRK640.png",
+                                        "width": 300
+                                    },
+                                    "name": "MyImg1",
+                                    "designerId": "460cf6ca-3e0e-4a78-9215-b353df68ad96"
+                                },
+                                {
+                                    "type": "Ext.Img",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": null,
+                                        "margin": "50 0 0 0",
+                                        "src": "hurricane/2015/img/hurricane2015.jpg",
+                                        "width": null
+                                    },
+                                    "name": "MyImg",
+                                    "designerId": "00be8c17-098e-4bb5-8c55-4fb70a80ec5b"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -115,6 +141,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "border": false,
+                        "container|align": "stretch",
+                        "layout": "vbox",
                         "title": "Eingabe"
                     },
                     "name": "MyPanel1",
@@ -127,6 +156,9 @@
                                 "type": "array"
                             },
                             "codeClass": null,
+                            "userConfig": {
+                                "width": 503
+                            },
                             "name": "eingabe",
                             "designerId": "f1e178a6-c5d8-4f12-8d94-9cabb77f9aed",
                             "masterInstanceId": "b0ec611e-b320-4d92-9d36-41fd623de198"

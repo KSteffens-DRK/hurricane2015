@@ -41,7 +41,19 @@ Ext.define('Hurricane.store.patientenList', {
                     type: 'json',
                     rootProperty: 'data'
                 }
+            },
+            listeners: {
+                beforeload: {
+                    fn: me.onStoreBeforeLoad,
+                    scope: me
+                }
             }
         }, cfg)]);
+    },
+
+    onStoreBeforeLoad: function(store, operation, eOpts) {
+        var newURL = window.location.protocol + "//" + window.location.host;
+        store.proxy.setUrl(newURL + '/resource/Libraries/Database/gridPatientenList.php');
     }
+
 });

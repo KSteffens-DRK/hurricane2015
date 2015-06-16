@@ -6,12 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
+        "border": false,
+        "container|align": "stretch",
         "designer|userAlias": "eingabe",
         "designer|userClassName": "Eingabe",
         "frameHeader": false,
         "header": false,
         "height": null,
         "id": "eingabe",
+        "layout": "hbox",
         "minHeight": null,
         "title": "My Panel",
         "width": null
@@ -29,9 +32,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "border": false,
                 "dock": null,
-                "store": "patientenLists",
-                "title": "My Grid Panel"
+                "frameHeader": false,
+                "header": false,
+                "store": "patientenList",
+                "title": "My Grid Panel",
+                "width": 300
             },
             "name": "MyGridPanel",
             "designerId": "2d4a9987-6f53-4bad-be01-2298adb3f616",
@@ -55,6 +62,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "patientenID",
+                        "hidden": true,
                         "text": "Patienten Id"
                     },
                     "name": "MyColumn1",
@@ -68,39 +76,27 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "dataIndex": "firstname",
-                        "text": "Firstname"
-                    },
-                    "name": "MyColumn2",
-                    "designerId": "27d99926-d116-4c48-8758-300485fa9b67"
-                },
-                {
-                    "type": "Ext.grid.column.Column",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
                         "dataIndex": "lastname",
-                        "text": "Lastname"
+                        "text": "Name"
                     },
-                    "name": "MyColumn3",
-                    "designerId": "0fffcfc7-0423-49a5-b22b-512225b50576"
-                },
-                {
-                    "type": "Ext.grid.column.Column",
-                    "reference": {
-                        "name": "columns",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "dataIndex": "gebDat",
-                        "text": "Geb Dat"
-                    },
-                    "name": "MyColumn4",
-                    "designerId": "0a95b12e-9a7a-4b89-a910-eea6590fab21"
+                    "name": "MyColumn",
+                    "designerId": "0fffcfc7-0423-49a5-b22b-512225b50576",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "tpl",
+                                "implHandler": null
+                            },
+                            "name": "tpl",
+                            "designerId": "c19f6ae1-2cd0-47af-a9c4-775ccd919350"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.grid.column.Column",
@@ -111,10 +107,23 @@
                     "codeClass": null,
                     "userConfig": {
                         "dataIndex": "count",
-                        "text": "Count"
+                        "text": "Anzahl"
                     },
                     "name": "MyColumn5",
                     "designerId": "991dfeb6-0f32-4d80-ae68-08de637ce8f5"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Info"
+                    },
+                    "name": "MyColumn2",
+                    "designerId": "64b17236-2f14-4138-95c8-09a04fa33a8e"
                 }
             ]
         }

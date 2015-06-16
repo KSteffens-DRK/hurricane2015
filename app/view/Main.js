@@ -28,6 +28,7 @@ Ext.define('Hurricane.view.Main', {
     viewModel: {
         type: 'main'
     },
+    border: false,
     scrollable: true,
     header: false,
     title: 'My Panel',
@@ -41,17 +42,21 @@ Ext.define('Hurricane.view.Main', {
     dockedItems: [
         {
             xtype: 'tabpanel',
+            flex: 1,
             dock: 'top',
+            border: false,
             frameHeader: false,
             activeTab: 0,
             items: [
                 {
                     xtype: 'panel',
                     tabIndex: 1,
+                    border: false,
                     title: 'Home',
                     layout: {
-                        type: 'vbox',
-                        align: 'center'
+                        type: 'hbox',
+                        align: 'stretch',
+                        pack: 'center'
                     },
                     tabConfig: {
                         xtype: 'tab',
@@ -59,24 +64,43 @@ Ext.define('Hurricane.view.Main', {
                     },
                     items: [
                         {
-                            xtype: 'image',
-                            margin: '70 0 0 0',
-                            width: 300,
-                            src: 'hurricane/2015/img/DRK640.png'
-                        },
-                        {
-                            xtype: 'image',
-                            margin: '50 0 0 0',
-                            src: 'hurricane/2015/img/hurricane2015.jpg'
+                            xtype: 'panel',
+                            border: false,
+                            frameHeader: false,
+                            header: false,
+                            title: 'My Panel',
+                            layout: {
+                                type: 'vbox',
+                                align: 'center'
+                            },
+                            items: [
+                                {
+                                    xtype: 'image',
+                                    margin: '70 0 0 0',
+                                    width: 300,
+                                    src: 'hurricane/2015/img/DRK640.png'
+                                },
+                                {
+                                    xtype: 'image',
+                                    margin: '50 0 0 0',
+                                    src: 'hurricane/2015/img/hurricane2015.jpg'
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     xtype: 'panel',
+                    border: false,
                     title: 'Eingabe',
+                    layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
                     items: [
                         {
-                            xtype: 'eingabe'
+                            xtype: 'eingabe',
+                            width: 503
                         }
                     ]
                 },

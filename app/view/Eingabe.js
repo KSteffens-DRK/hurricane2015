@@ -21,47 +21,52 @@ Ext.define('Hurricane.view.Eingabe', {
         'Hurricane.view.EingabeViewModel',
         'Ext.grid.Panel',
         'Ext.view.Table',
-        'Ext.grid.column.Column'
+        'Ext.grid.column.Column',
+        'Ext.XTemplate'
     ],
 
     viewModel: {
         type: 'eingabe'
     },
+    border: false,
     id: 'eingabe',
     frameHeader: false,
     header: false,
     title: 'My Panel',
 
+    layout: {
+        type: 'hbox',
+        align: 'stretch'
+    },
     items: [
         {
             xtype: 'gridpanel',
+            border: false,
+            width: 300,
+            frameHeader: false,
+            header: false,
             title: 'My Grid Panel',
-            store: 'patientenLists',
+            store: 'patientenList',
             columns: [
                 {
                     xtype: 'gridcolumn',
+                    hidden: true,
                     dataIndex: 'patientenID',
                     text: 'Patienten Id'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'firstname',
-                    text: 'Firstname'
-                },
-                {
-                    xtype: 'gridcolumn',
                     dataIndex: 'lastname',
-                    text: 'Lastname'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'gebDat',
-                    text: 'Geb Dat'
+                    text: 'Name'
                 },
                 {
                     xtype: 'gridcolumn',
                     dataIndex: 'count',
-                    text: 'Count'
+                    text: 'Anzahl'
+                },
+                {
+                    xtype: 'gridcolumn',
+                    text: 'Info'
                 }
             ]
         }
