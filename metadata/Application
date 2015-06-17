@@ -7,16 +7,25 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "patientenList"
+            "patientenList",
+            "DiagnostickKey",
+            "Shooting",
+            "Gender",
+            "Whereabout"
         ],
         "name": "Hurricane",
         "stores": [
-            "patientenList"
+            "patientenList",
+            "DiagnostickKey",
+            "Shooting",
+            "Gender",
+            "Whereabout"
         ],
         "views": [
             "MainViewport",
             "Main",
-            "Eingabe"
+            "Eingabe",
+            "frmEingabe"
         ]
     },
     "name": "Application",

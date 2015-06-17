@@ -1,0 +1,601 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "container|align": "stretch",
+        "designer|userAlias": "frmeingabe",
+        "designer|userClassName": "frmEingabe",
+        "frameHeader": false,
+        "header": false,
+        "height": 680,
+        "id": "frmEingabe",
+        "layout": "vbox",
+        "minHeight": null,
+        "title": "My Form",
+        "width": 400
+    },
+    "name": "MyForm",
+    "designerId": "16d6717e-945b-42c6-881c-6569a573eb66",
+    "viewControllerInstanceId": "a45affca-f3ff-4f08-b9ed-69c466ff1bb2",
+    "viewModelInstanceId": "8e7cea47-980c-4a9d-b6d7-a96822ebeda0",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 679,
+                "title": "My Fields",
+                "width": 406
+            },
+            "name": "MyFieldSet",
+            "designerId": "b3ae02aa-e27e-440b-9a93-3d12f255e196",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "title": "Info"
+                    },
+                    "name": "MyFieldSet1",
+                    "designerId": "76cc8fdc-62f4-4028-983d-2dd5c7f4124c",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Datum",
+                                "format": "d.m.Y",
+                                "id": "date",
+                                "layout|anchor": "100%",
+                                "name": "Date",
+                                "submitFormat": "Y-m-d"
+                            },
+                            "name": "MyDateField",
+                            "designerId": "751e738c-9206-4dc0-ac22-2093ae3e416b",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onDatefieldFocus",
+                                        "implHandler": [
+                                            "Ext.getCmp('date').setValue(new Date());"
+                                        ],
+                                        "name": "focus",
+                                        "scope": "me"
+                                    },
+                                    "name": "onDatefieldFocus",
+                                    "designerId": "510b9023-1735-49b1-b14f-afcb9efe3cf7"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Time",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "Uhrzeit",
+                                "format": "H:i",
+                                "layout|anchor": "100%",
+                                "name": "intime",
+                                "submitFormat": "H:i:s"
+                            },
+                            "name": "MyTimeField",
+                            "designerId": "db3c9668-a16d-4700-9496-f10c78a45249"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "Patienten-Nr",
+                                "layout|anchor": "100%",
+                                "name": "PatNr"
+                            },
+                            "name": "MyTextField",
+                            "designerId": "443afba6-1610-4687-a8e2-b5c6d9ecbbfc"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "autoSelect": false,
+                                "displayField": "key",
+                                "fieldLabel": "Aufnahmeort",
+                                "forceSelection": true,
+                                "layout|anchor": "100%",
+                                "minChars": 1,
+                                "name": "shooting",
+                                "selectOnTab": null,
+                                "store": "Shooting",
+                                "typeAhead": true,
+                                "typeAheadDelay": null,
+                                "valueField": "shootingID"
+                            },
+                            "name": "MyComboBox",
+                            "designerId": "5a49cac6-0c03-4da9-9e12-89f810c2973b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Patienten Info"
+                    },
+                    "name": "MyFieldSet2",
+                    "designerId": "9297d46b-3147-4bda-a196-c902bf9a85be",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "enableKeyEvents": true,
+                                "fieldLabel": "Vorname",
+                                "id": "firstnameId",
+                                "layout|anchor": "100%",
+                                "name": "firstname"
+                            },
+                            "name": "MyTextField6",
+                            "designerId": "f35780e7-f396-4de9-8006-26a3cec33f87",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onFirstnameIdKeyup",
+                                        "implHandler": [
+                                            "var store = Ext.getStore('patientenList') ;",
+                                            "store.clearFilter(true);",
+                                            "store.filter('lastname', Ext.getCmp('lastNameId').getValue(), true, false);",
+                                            "store.filter('firstname', Ext.getCmp('firstnameId').getValue(), true, false);",
+                                            "store.reload();"
+                                        ],
+                                        "name": "keyup",
+                                        "scope": "me"
+                                    },
+                                    "name": "onFirstnameIdKeyup",
+                                    "designerId": "04989812-3b67-48fb-971b-ce09154c42da"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "enableKeyEvents": true,
+                                "fieldLabel": "Nachname",
+                                "id": "lastNameId",
+                                "layout|anchor": "100%",
+                                "name": "lastname"
+                            },
+                            "name": "MyTextField7",
+                            "designerId": "e90fe16c-b387-4c7e-aa71-ff93f1794103",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onLastNameIdKeyup",
+                                        "implHandler": [
+                                            "var store = Ext.getStore('patientenList') ;",
+                                            "store.clearFilter(true);",
+                                            "store.filter('lastname', Ext.getCmp('lastNameId').getValue(), true, false);",
+                                            "store.filter('firstname', Ext.getCmp('firstnameId').getValue(), true, false);",
+                                            "store.reload();",
+                                            ""
+                                        ],
+                                        "name": "keyup",
+                                        "scope": "me"
+                                    },
+                                    "name": "onLastNameIdKeyup",
+                                    "designerId": "4ddf53ea-49dc-4934-a70b-26ebbc036339"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Geburtsdatum",
+                                "format": "d.m.Y",
+                                "layout|anchor": "100%",
+                                "name": "gebDat",
+                                "submitFormat": "Y-m-d"
+                            },
+                            "name": "MyDateField1",
+                            "designerId": "7379f77e-5554-40aa-b4af-948a0c924e12"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "key",
+                                "fieldLabel": "Geschlecht",
+                                "forceSelection": true,
+                                "layout|anchor": "100%",
+                                "minChars": 2,
+                                "name": "gender",
+                                "store": "Gender",
+                                "typeAhead": true,
+                                "typeAheadDelay": 100,
+                                "valueField": "GenderID"
+                            },
+                            "name": "MyComboBox1",
+                            "designerId": "f52a23a1-9c16-4465-83a6-caaf525bb04a"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Straße",
+                                "layout|anchor": "100%",
+                                "name": "street"
+                            },
+                            "name": "MyTextField1",
+                            "designerId": "e61bcac3-2f6c-417a-9287-9dce1c1df0e1"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Postleizahl",
+                                "layout|anchor": "100%",
+                                "name": "plz"
+                            },
+                            "name": "MyTextField2",
+                            "designerId": "47eee988-d6da-4ca3-8b42-17f81d5481e3"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Ort",
+                                "layout|anchor": "100%",
+                                "name": "town"
+                            },
+                            "name": "MyTextField3",
+                            "designerId": "b327042e-2f86-46c9-857b-e1d0c7a0377b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Kategorie / Helfer"
+                    },
+                    "name": "MyFieldSet3",
+                    "designerId": "0f6b41c2-7b82-4ce9-bdfe-ae99243cb85c",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "key",
+                                "fieldLabel": "Diagnoseschlüssel",
+                                "forceSelection": true,
+                                "layout|anchor": "100%",
+                                "minChars": 2,
+                                "name": "digkey",
+                                "queryMode": null,
+                                "store": "DiagnostickKey",
+                                "typeAhead": true,
+                                "typeAheadDelay": 100,
+                                "valueField": "digID"
+                            },
+                            "name": "MyComboBox2",
+                            "designerId": "2f1f4dd9-1728-473a-84f6-6bfedc76f6f7"
+                        },
+                        {
+                            "type": "Ext.form.field.ComboBox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "displayField": "key",
+                                "fieldLabel": "Verbleib",
+                                "forceSelection": true,
+                                "layout|anchor": "100%",
+                                "minChars": 2,
+                                "name": "whereabout",
+                                "store": "Whereabout",
+                                "typeAhead": true,
+                                "typeAheadDelay": 100,
+                                "valueField": "whereaboutID"
+                            },
+                            "name": "MyComboBox3",
+                            "designerId": "da4b3016-ba8f-4a54-aa01-41be210a4954"
+                        },
+                        {
+                            "type": "Ext.form.field.Time",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "Ausgangszeit",
+                                "format": "H:i",
+                                "layout|anchor": "100%",
+                                "name": "outtime",
+                                "submitFormat": "H:i:s"
+                            },
+                            "name": "MyTimeField1",
+                            "designerId": "53252e1b-db1a-4e1c-aec4-d56d8b1082ce"
+                        },
+                        {
+                            "type": "Ext.form.field.Date",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Ausgangsdatum",
+                                "format": "d.m.Y",
+                                "layout|anchor": "100%",
+                                "name": "outdate",
+                                "submitFormat": "Y-m-d"
+                            },
+                            "name": "MyDateField2",
+                            "designerId": "1f9f8efc-d6ec-45a6-a258-f761d2b6e4f2"
+                        },
+                        {
+                            "type": "Ext.form.field.TextArea",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Bemerkung",
+                                "layout|anchor": "100%",
+                                "name": "remark"
+                            },
+                            "name": "MyTextArea",
+                            "designerId": "2d871151-fd25-4dff-8774-b7dc86f30152"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "allowBlank": false,
+                                "fieldLabel": "1. Helfer-Nr",
+                                "layout|anchor": "100%",
+                                "name": "helpernr1"
+                            },
+                            "name": "MyTextField4",
+                            "designerId": "5bffb01d-e59e-4466-a962-5ac206108ca0"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "2. Helfer-Nr",
+                                "layout|anchor": "100%",
+                                "name": "helpernr2"
+                            },
+                            "name": "MyTextField5",
+                            "designerId": "1223be8a-aac3-4fd0-93c1-f7c024753fde"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "frameHeader": false,
+                        "header": false,
+                        "layout": "hbox",
+                        "manageHeight": false,
+                        "minHeight": null,
+                        "title": "My Panel"
+                    },
+                    "name": "MyPanel5",
+                    "designerId": "3232b8b8-8b5b-49f7-9ca0-3eb477ebe61a",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "Speichern"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "3cac77c0-0b85-40b4-9806-ded3e8bdfb61",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick1",
+                                        "implHandler": [
+                                            "var form = Ext.getCmp('frmEingabe');",
+                                            "if (form.isValid()) {",
+                                            "    form.submit({",
+                                            "        url: 'resource/Libraries/Database/savePatient.php',",
+                                            "        success: function (form, action){",
+                                            "            Ext.Msg.show({",
+                                            "                title: 'Speichern erfolgreich',",
+                                            "                msg: 'Datensatz wurde erfolgreich gespeichert',",
+                                            "                buttons: Ext.Msg.OK,",
+                                            "                icon: Ext.Msg.INFO",
+                                            "            });",
+                                            "            form.reset();",
+                                            "            Ext.getStore('patientenList').reload();",
+                                            "            ",
+                                            "        },",
+                                            "        failure: function(form, action) {",
+                                            "            console.log(form);",
+                                            "            console.log(action.result);",
+                                            "            Ext.Msg.show({",
+                                            "                title: 'Speichern fehlgeschlagen',",
+                                            "                msg: 'Datensatz wurde nicht gespeichert <br>' + action.result,",
+                                            "                buttons: Ext.Msg.OK,",
+                                            "                icon: Ext.Msg.ERROR",
+                                            "            });",
+                                            "        },",
+                                            "    });",
+                                            "",
+                                            "}",
+                                            "",
+                                            "console.log(this);"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick1",
+                                    "designerId": "d0b29e6e-7c01-4920-b598-d503bd9cf09e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "margin": "0 10 10 10 ",
+                                "text": "Eingabe Löschen"
+                            },
+                            "name": "MyButton",
+                            "designerId": "3314258b-5a61-45eb-9ac3-e85798bf2917",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "Ext.getCmp('frmEingabe').reset();",
+                                            "Ext.getStore('PatientenList').clearFilter();",
+                                            "Ext.getCmp('date').focus(false, 200);"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonClick",
+                                    "designerId": "275be78c-26fb-44fc-ace7-ad1ff8a64f9c"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

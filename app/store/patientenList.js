@@ -18,7 +18,6 @@ Ext.define('Hurricane.store.patientenList', {
 
     requires: [
         'Hurricane.model.patientenList',
-        'Ext.util.Sorter',
         'Ext.data.proxy.Ajax',
         'Ext.data.reader.Json'
     ],
@@ -27,16 +26,13 @@ Ext.define('Hurricane.store.patientenList', {
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({
+            pageSize: 500,
             storeId: 'patientenList',
             autoLoad: true,
             autoSync: true,
             model: 'Hurricane.model.patientenList',
-            sorters: {
-                property: 'lastname'
-            },
             proxy: {
                 type: 'ajax',
-                url: 'resource/Libraries/Database/gridPatientenList.php',
                 reader: {
                     type: 'json',
                     rootProperty: 'data'
@@ -46,14 +42,25 @@ Ext.define('Hurricane.store.patientenList', {
                 beforeload: {
                     fn: me.onStoreBeforeLoad,
                     scope: me
+                },
+                beforesync: {
+                    fn: me.onBufferedStoreBeforeSync,
+                    scope: me
                 }
             }
         }, cfg)]);
     },
 
     onStoreBeforeLoad: function(store, operation, eOpts) {
-        var newURL = window.location.protocol + "//" + window.location.host;
-        store.proxy.setUrl(newURL + '/resource/Libraries/Database/gridPatientenList.php');
+        //var newURL = window.location.protocol + "//" + window.location.host;
+        //store.proxy.setUrl(newURL + '/resource/Libraries/Database/gridPatientenList.php');
+        store.proxy.setUrl('resource/Libraries/Database/gridPatientenList.php');
+    },
+
+    onBufferedStoreBeforeSync: function(options, eOpts) {
+        //var newURL = window.location.protocol + "//" + window.location.host;
+        //store.proxy.setUrl(newURL + '/resource/Libraries/Database/gridPatientenList.php');
+        store.proxy.setUrl('resource/Libraries/Database/gridPatientenList.php');
     }
 
 });

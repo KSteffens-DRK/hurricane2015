@@ -19,12 +19,19 @@ Ext.define('Hurricane.view.Eingabe', {
 
     requires: [
         'Hurricane.view.EingabeViewModel',
+        'Hurricane.view.EingabeViewController',
+        'Hurricane.view.frmEingabe',
         'Ext.grid.Panel',
         'Ext.view.Table',
-        'Ext.grid.column.Column',
-        'Ext.XTemplate'
+        'Ext.grid.column.RowNumberer',
+        'Ext.grid.column.Template',
+        'Ext.XTemplate',
+        'Ext.grid.column.Action',
+        'Ext.grid.plugin.BufferedRenderer',
+        'Ext.form.Panel'
     ],
 
+    controller: 'eingabe',
     viewModel: {
         type: 'eingabe'
     },
@@ -42,12 +49,20 @@ Ext.define('Hurricane.view.Eingabe', {
         {
             xtype: 'gridpanel',
             border: false,
+            height: 500,
+            id: 'patientenList',
+            minHeight: 500,
             width: 300,
             frameHeader: false,
             header: false,
+            manageHeight: false,
             title: 'My Grid Panel',
             store: 'patientenList',
             columns: [
+                {
+                    xtype: 'rownumberer',
+                    width: 30
+                },
                 {
                     xtype: 'gridcolumn',
                     hidden: true,
@@ -55,20 +70,50 @@ Ext.define('Hurricane.view.Eingabe', {
                     text: 'Patienten Id'
                 },
                 {
-                    xtype: 'gridcolumn',
+                    xtype: 'templatecolumn',
+                    tpl: [
+                        '<b>{lastname}, {firstname}</b><br />{gebDat:date("d.m.Y")}'
+                    ],
+                    width: 170,
                     dataIndex: 'lastname',
                     text: 'Name'
                 },
                 {
                     xtype: 'gridcolumn',
+                    width: 50,
                     dataIndex: 'count',
                     text: 'Anzahl'
                 },
                 {
-                    xtype: 'gridcolumn',
-                    text: 'Info'
+                    xtype: 'actioncolumn',
+                    width: 50,
+                    text: 'Info',
+                    items: [
+                        {
+                            handler: function(view, rowIndex, colIndex, item, e, record, row) {
+                                Ext.create('Hurricane.view.DetailWindow', {record: record}).show();
+                            },
+                            icon: 'resource/icons/page_find.gif',
+                            tooltip: 'Protocoll Info\'s'
+                        }
+                    ]
                 }
-            ]
+            ],
+            plugins: [
+                {
+                    ptype: 'bufferedrenderer',
+                    leadingBufferZone: 50,
+                    numFromEdge: 10,
+                    trailingBufferZone: 50
+                }
+            ],
+            listeners: {
+                afterrender: 'onPatientenListAfterRender'
+            }
+        },
+        {
+            xtype: 'frmeingabe',
+            minHeight: 400
         }
     ]
 

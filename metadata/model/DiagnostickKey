@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DiagnostickKey"
+    },
+    "name": "MyModel",
+    "designerId": "b6c34074-19a0-4552-8d5d-d9fcd55d3f1a",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "digID"
+            },
+            "name": "MyField11",
+            "designerId": "f964790f-6696-495d-a5c7-737fdec42f5c"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "description"
+            },
+            "name": "MyField12",
+            "designerId": "e84d7777-470b-45db-9d1e-b7f7b311b720"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "key"
+            },
+            "name": "MyField13",
+            "designerId": "b63b8ff2-a283-4971-bb52-1a104411f16e"
+        }
+    ]
+}

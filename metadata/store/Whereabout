@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Whereabout",
+        "model": "Whereabout",
+        "storeId": "Whereabout"
+    },
+    "name": "MyJsonStore1",
+    "designerId": "4e1c8547-1f0f-497d-b487-1ebf74112b6e",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "resource/Libraries/Database/getWhereaboutKey.php"
+            },
+            "name": "MyAjaxProxy4",
+            "designerId": "5b341848-2e65-4e6a-84c6-c0dd165b1fa0",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader4",
+                    "designerId": "4a529f06-ab61-4a40-86b9-d7d51cd42386"
+                }
+            ]
+        }
+    ]
+}

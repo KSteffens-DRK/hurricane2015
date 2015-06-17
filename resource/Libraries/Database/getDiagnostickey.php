@@ -3,14 +3,15 @@ include_once 'connect.php';
 
 $query = 'SELECT * FROM `diagnosiskey`';
 
-$sqldata = mysql_query($query);
+$sqldata = $mysqli->query($query);
 
 $rows = array();
-while($r = mysql_fetch_assoc($sqldata)) {
+while($r = mysqli_fetch_assoc($sqldata)) {
 	$r = array_map("utf8_encode", $r);
 	$rows[] = $r;
 
 }
+mysqli_close($mysqli);
 $result['success'] = true;
 $result['data'] = $rows;
 echo json_encode($result);

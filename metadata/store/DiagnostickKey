@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DiagnostickKey",
+        "model": "DiagnostickKey",
+        "storeId": "DiagnostickKey"
+    },
+    "name": "MyJsonStore",
+    "designerId": "190f5bdf-4416-4d07-bb8d-887356824e37",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "resource/Libraries/Database/getDiagnostickey.php"
+            },
+            "name": "MyAjaxProxy1",
+            "designerId": "3446d04d-66f5-4a09-8790-e0a2731aeb2a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "c95d6b71-84c8-40ed-914e-64fd7a43b942"
+                }
+            ]
+        }
+    ]
+}

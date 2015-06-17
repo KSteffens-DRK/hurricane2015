@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "frmeingabe",
+        "designer|userClassName": "frmEingabeViewModel"
+    },
+    "designerId": "8e7cea47-980c-4a9d-b6d7-a96822ebeda0"
+}

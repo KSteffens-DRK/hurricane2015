@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Shooting"
+    },
+    "name": "MyModel",
+    "designerId": "c47dfb3b-0afe-43d0-958c-973fcf164760",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "shootingID"
+            },
+            "name": "MyField14",
+            "designerId": "1b547aea-0fbf-4db6-848d-939fad14c716"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "description"
+            },
+            "name": "MyField15",
+            "designerId": "6acf3c62-63ce-4c17-a675-4adcaa334045"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "key"
+            },
+            "name": "MyField16",
+            "designerId": "379bbc81-313a-46dc-a34c-7f4f4b5aa31e"
+        }
+    ]
+}

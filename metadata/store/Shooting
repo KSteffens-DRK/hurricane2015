@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Shooting",
+        "model": "Shooting",
+        "storeId": "Shooting"
+    },
+    "name": "MyJsonStore",
+    "designerId": "28c819e9-1b65-4a22-96d5-1eacaf00a81f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "resource/Libraries/Database/getShootingKey.php"
+            },
+            "name": "MyAjaxProxy2",
+            "designerId": "c53bf638-f00e-47bd-a33b-38cd40e64972",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "80e396b6-b67d-4bd9-914e-c571c59ca0a5"
+                }
+            ]
+        }
+    ]
+}

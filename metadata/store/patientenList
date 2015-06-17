@@ -10,24 +10,11 @@
         "autoSync": true,
         "designer|userClassName": "patientenList",
         "model": "patientenList",
+        "pageSize": 500,
         "storeId": "patientenList"
     },
-    "name": "MyStore",
     "designerId": "fcd3daa3-93eb-4e84-8699-4e3972fe49c3",
     "cn": [
-        {
-            "type": "Ext.util.Sorter",
-            "reference": {
-                "name": "sorters",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "property": "lastname"
-            },
-            "name": "MySorter",
-            "designerId": "4dfdfcf9-8302-497e-907a-d677cb5d6549"
-        },
         {
             "type": "Ext.data.proxy.Ajax",
             "reference": {
@@ -36,7 +23,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "resource/Libraries/Database/gridPatientenList.php"
+                "url": null
             },
             "name": "MyAjaxProxy",
             "designerId": "6ca3b329-7137-4281-9531-209be0ecd6e9",
@@ -66,14 +53,35 @@
             "userConfig": {
                 "fn": "onStoreBeforeLoad",
                 "implHandler": [
-                    "var newURL = window.location.protocol + \"//\" + window.location.host;",
-                    "store.proxy.setUrl(newURL + '/resource/Libraries/Database/gridPatientenList.php');"
+                    "//var newURL = window.location.protocol + \"//\" + window.location.host;",
+                    "//store.proxy.setUrl(newURL + '/resource/Libraries/Database/gridPatientenList.php');",
+                    "store.proxy.setUrl('resource/Libraries/Database/gridPatientenList.php');"
                 ],
                 "name": "beforeload",
                 "scope": "me"
             },
             "name": "onStoreBeforeLoad",
             "designerId": "7a2ae223-5015-44d8-a786-f8b6256abf90"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBufferedStoreBeforeSync",
+                "implHandler": [
+                    "//var newURL = window.location.protocol + \"//\" + window.location.host;",
+                    "//store.proxy.setUrl(newURL + '/resource/Libraries/Database/gridPatientenList.php');",
+                    "store.proxy.setUrl('resource/Libraries/Database/gridPatientenList.php');"
+                ],
+                "name": "beforesync",
+                "scope": "me"
+            },
+            "name": "onBufferedStoreBeforeSync",
+            "designerId": "890bf0b4-4724-44b3-b596-5a72b427528b"
         }
     ]
 }

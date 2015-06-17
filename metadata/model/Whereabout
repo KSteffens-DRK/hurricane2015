@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Whereabout"
+    },
+    "name": "MyModel",
+    "designerId": "b47998a5-0c38-44cc-abde-95e9eaedeb88",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "whereaboutID"
+            },
+            "name": "MyField20",
+            "designerId": "69a82174-1b2e-4129-8535-dbf9fcc72938"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "description"
+            },
+            "name": "MyField21",
+            "designerId": "a73c0766-ceb3-4818-889e-1fc8782d749b"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "key"
+            },
+            "name": "MyField22",
+            "designerId": "451988ce-eadf-4d41-b638-be4d1d97ec8f"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Gender",
+        "model": "Gender",
+        "storeId": "Gender"
+    },
+    "name": "MyJsonStore",
+    "designerId": "b3814568-9d65-4a68-b646-06e5fda08996",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "resource/Libraries/Database/getGenderkey.php"
+            },
+            "name": "MyAjaxProxy3",
+            "designerId": "d949308e-470c-4833-b6f5-cecf6f98d1a3",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "data"
+                    },
+                    "name": "MyJsonReader3",
+                    "designerId": "85ccbf28-d638-4e9d-90d9-061b03447f0b"
+                }
+            ]
+        }
+    ]
+}

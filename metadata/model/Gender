@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Gender"
+    },
+    "name": "MyModel",
+    "designerId": "f2105d75-1f57-40ec-949c-3bc334f85abf",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "GenderID"
+            },
+            "name": "MyField17",
+            "designerId": "26f8951d-28e1-4f43-848b-0b30ad143be9"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "description"
+            },
+            "name": "MyField18",
+            "designerId": "409208c4-949a-400b-b3a3-c01aebffbdc6"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "key"
+            },
+            "name": "MyField19",
+            "designerId": "0fff0505-31ac-4f5f-8032-2324dc036a59"
+        }
+    ]
+}
